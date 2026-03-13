@@ -1,0 +1,434 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors — Tunisian Red + German Gold + Navy */
+  --color-white: #FFFFFF;
+  --color-off-white: #FFF8F0;
+  --color-light-gray: #F8F4F0;
+  --color-medium-gray: #E8E2DC;
+  --color-text-dark: #1D3557;
+  --color-text-gray: #6C757D;
+  --color-accent: #E63946;
+  --color-accent-hover: #C1121F;
+  --color-secondary: #FFBA08;
+  --color-success: #2D6A4F;
+  --color-border: #E8E2DC;
+
+  /* Font Families */
+  --font-family-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family-heading: 'Poppins', 'Inter', sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+  --spacing-3xl: 6rem;
+
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+
+  /* Background Images */
+  --background-image-gradient-soft: linear-gradient(135deg, #FFF8F0 0%, #FFFFFF 100%);
+
+  /* Box Shadows */
+  --box-shadow-soft: 0 2px 8px rgba(29, 53, 87, 0.06);
+  --box-shadow-medium: 0 4px 12px rgba(29, 53, 87, 0.10);
+  --box-shadow-large: 0 8px 24px rgba(29, 53, 87, 0.14);
+
+  /* Animations */
+  --animate-fade-in: fadeIn 0.6s ease-out;
+  --animate-fade-in-up: fadeInUp 0.6s ease-out;
+  --animate-float: float 3s ease-in-out infinite;
+
+  /* Keyframes */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes fadeInUp {
+    0% { 
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #FFFFFF;
+    color: #1D3557;
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-poppins), var(--font-inter), sans-serif;
+    font-weight: 600;
+  }
+  
+  h1 {
+    font-size: 2.25rem;
+  }
+  
+  h2 {
+    font-size: 1.875rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  a {
+    color: #E63946;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3rem;
+    }
+    
+    h2 {
+      font-size: 2.25rem;
+    }
+    
+    h3 {
+      font-size: 1.875rem;
+    }
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+  .btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn-primary {
+    background-color: #E63946;
+    color: #FFFFFF;
+  }
+  
+  .btn-primary:hover {
+    background-color: #C1121F;
+    box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
+    text-decoration: none;
+  }
+  
+  .btn-secondary {
+    background-color: #F8F4F0;
+    color: #1D3557;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #E8E2DC;
+    text-decoration: none;
+  }
+  
+  .card {
+    background-color: #FFFFFF;
+    border: 1px solid #E8E2DC;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 12px rgba(29, 53, 87, 0.10);
+  }
+  
+  .input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #E8E2DC;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .input:focus {
+    outline: none;
+    border-color: #E63946;
+    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.1);
+  }
+  
+  .textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #E8E2DC;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    resize: vertical;
+  }
+  
+  .textarea:focus {
+    outline: none;
+    border-color: #E63946;
+    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.1);
+  }
+}
+
+@layer utilities {
+  .prose {
+    max-width: none;
+  }
+  
+  .prose pre {
+    background-color: #1D3557;
+    color: #FFFFFF;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin: 1rem 0;
+  }
+  
+  .prose code {
+    background-color: #F8F4F0;
+    color: #1D3557;
+    padding: 0.125rem 0.375rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+  }
+  
+  .prose pre code {
+    background-color: transparent;
+    color: #FFFFFF;
+    padding: 0;
+  }
+  
+  .prose img {
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(29, 53, 87, 0.06);
+    margin: 1.5rem 0;
+  }
+  
+  .prose a {
+    color: #E63946;
+    text-decoration: none;
+  }
+  
+  .prose a:hover {
+    text-decoration: underline;
+  }
+  
+  .prose blockquote {
+    border-left: 4px solid #FFBA08;
+    padding-left: 1rem;
+    font-style: italic;
+    color: #6C757D;
+    margin: 1rem 0;
+  }
+  
+  .prose table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+  }
+  
+  .prose th {
+    background-color: #F8F4F0;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    border: 1px solid #E8E2DC;
+  }
+  
+  .prose td {
+    padding: 0.75rem 1rem;
+    border: 1px solid #E8E2DC;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+  
+  /* Chatbot Markdown Styles - Optimized for chat messages */
+  .chatbot-markdown {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .chatbot-markdown .prose {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    width: 100%;
+    max-width: 100% !important;
+    min-width: 0;
+  }
+
+  .chatbot-markdown .prose * {
+    max-width: 100% !important;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+  }
+
+  .chatbot-markdown .prose p,
+  .chatbot-markdown .prose div,
+  .chatbot-markdown .prose span {
+    width: 100%;
+    max-width: 100% !important;
+  }
+  
+  .chatbot-markdown .prose h1,
+  .chatbot-markdown .prose h2,
+  .chatbot-markdown .prose h3,
+  .chatbot-markdown .prose h4 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .chatbot-markdown .prose h1 {
+    font-size: 1.25rem;
+    border-bottom: 2px solid #E63946;
+    padding-bottom: 0.25rem;
+  }
+  
+  .chatbot-markdown .prose h2 {
+    font-size: 1.15rem;
+    border-bottom: 1px solid #E8E2DC;
+    padding-bottom: 0.25rem;
+  }
+  
+  .chatbot-markdown .prose p {
+    margin-bottom: 0.75rem;
+  }
+  
+  .chatbot-markdown .prose ul,
+  .chatbot-markdown .prose ol {
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+    padding-left: 1.25rem;
+  }
+  
+  .chatbot-markdown .prose li {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .chatbot-markdown .prose code {
+    font-size: 0.875em;
+    padding: 0.15rem 0.35rem;
+  }
+  
+  .chatbot-markdown .prose pre {
+    margin: 1rem 0;
+    font-size: 0.875rem;
+    overflow-x: auto;
+    width: 100%;
+    max-width: 100% !important;
+  }
+
+  .chatbot-markdown .prose pre code {
+    padding: 1rem;
+    font-size: 0.875rem;
+    display: block;
+    width: 100%;
+  }
+  
+  .chatbot-markdown .prose blockquote {
+    margin: 0.75rem 0;
+    padding: 0.5rem 1rem;
+  }
+  
+  .chatbot-markdown .prose table {
+    margin: 1rem 0;
+    font-size: 0.875rem;
+    display: block;
+    overflow-x: auto;
+    max-width: 100%;
+  }
+  
+  .chatbot-markdown .prose .callout {
+    margin: 0.75rem 0;
+    padding: 0.75rem;
+  }
+  
+  .chatbot-markdown .prose .callout-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .chatbot-markdown .prose a {
+    color: #E63946;
+    font-weight: 500;
+  }
+  
+  .chatbot-markdown .prose a:hover {
+    color: #C1121F;
+  }
+  
+  .chatbot-markdown .prose strong {
+    color: #1D3557;
+    font-weight: 600;
+  }
+  
+  .chatbot-markdown .prose hr {
+    margin: 1.5rem 0;
+  }

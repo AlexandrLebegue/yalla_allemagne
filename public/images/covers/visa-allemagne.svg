@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" style="stop-color:#1D3557"/>
+      <stop offset="100%" style="stop-color:#457B9D"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg1)"/>
+  <!-- Passport icon -->
+  <rect x="310" y="80" width="180" height="240" rx="12" fill="#E63946" opacity="0.9"/>
+  <rect x="325" y="95" width="150" height="210" rx="8" fill="#C1121F"/>
+  <!-- Passport lines -->
+  <text x="400" y="150" font-family="Arial, sans-serif" font-size="16" fill="#FFF8F0" text-anchor="middle" font-weight="bold">REISEPASS</text>
+  <circle cx="400" cy="210" r="35" fill="none" stroke="#FFBA08" stroke-width="2"/>
+  <text x="400" y="215" font-family="Arial, sans-serif" font-size="28" fill="#FFBA08" text-anchor="middle">🛂</text>
+  <!-- German flag stripes at bottom of passport -->
+  <rect x="350" y="270" width="100" height="8" rx="2" fill="#000"/>
+  <rect x="350" y="280" width="100" height="8" rx="2" fill="#DD0000"/>
+  <rect x="350" y="290" width="100" height="8" rx="2" fill="#FFBA08"/>
+  <!-- Decorative elements -->
+  <circle cx="150" cy="100" r="60" fill="#FFBA08" opacity="0.1"/>
+  <circle cx="650" cy="300" r="80" fill="#E63946" opacity="0.1"/>
+  <!-- Title -->
+  <text x="400" y="370" font-family="Arial, sans-serif" font-size="20" fill="#FFF8F0" text-anchor="middle" opacity="0.8">Visa & Papiers</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" style="stop-color:#E63946"/>
+      <stop offset="100%" style="stop-color:#C1121F"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg3)"/>
+  <!-- Briefcase -->
+  <rect x="300" y="130" width="200" height="150" rx="12" fill="#FFF8F0" opacity="0.9"/>
+  <rect x="350" y="110" width="100" height="30" rx="8" fill="none" stroke="#FFF8F0" stroke-width="4"/>
+  <!-- Briefcase details -->
+  <line x1="300" y1="180" x2="500" y2="180" stroke="#E8E2DC" stroke-width="2"/>
+  <rect x="380" y="170" width="40" height="20" rx="4" fill="#FFBA08"/>
+  <!-- Document lines -->
+  <rect x="330" y="200" width="140" height="6" rx="3" fill="#E8E2DC"/>
+  <rect x="330" y="215" width="100" height="6" rx="3" fill="#E8E2DC"/>
+  <rect x="330" y="230" width="120" height="6" rx="3" fill="#E8E2DC"/>
+  <rect x="330" y="245" width="80" height="6" rx="3" fill="#E8E2DC"/>
+  <!-- Decorative -->
+  <circle cx="140" cy="120" r="60" fill="#FFBA08" opacity="0.15"/>
+  <circle cx="660" cy="280" r="80" fill="#FFF8F0" opacity="0.05"/>
+  <!-- Stars -->
+  <text x="600" y="100" font-family="Arial" font-size="30" fill="#FFBA08" opacity="0.4">★</text>
+  <text x="180" y="300" font-family="Arial" font-size="24" fill="#FFBA08" opacity="0.3">★</text>
+  <!-- Title -->
+  <text x="400" y="370" font-family="Arial, sans-serif" font-size="20" fill="#FFF8F0" text-anchor="middle" opacity="0.8">Travail</text>
+</svg>

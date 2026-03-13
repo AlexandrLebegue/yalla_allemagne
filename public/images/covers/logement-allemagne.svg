@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" style="stop-color:#2D6A4F"/>
+      <stop offset="100%" style="stop-color:#40916C"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg2)"/>
+  <!-- Building -->
+  <rect x="300" y="100" width="200" height="220" rx="4" fill="#FFF8F0" opacity="0.9"/>
+  <rect x="280" y="90" width="240" height="20" rx="4" fill="#FFF8F0"/>
+  <!-- Windows -->
+  <rect x="320" y="130" width="35" height="35" rx="3" fill="#1D3557"/>
+  <rect x="370" y="130" width="35" height="35" rx="3" fill="#1D3557"/>
+  <rect x="420" y="130" width="35" height="35" rx="3" fill="#1D3557"/>
+  <rect x="320" y="180" width="35" height="35" rx="3" fill="#1D3557"/>
+  <rect x="370" y="180" width="35" height="35" rx="3" fill="#FFBA08"/>
+  <rect x="420" y="180" width="35" height="35" rx="3" fill="#1D3557"/>
+  <rect x="320" y="230" width="35" height="35" rx="3" fill="#1D3557"/>
+  <rect x="370" y="230" width="35" height="35" rx="3" fill="#1D3557"/>
+  <rect x="420" y="230" width="35" height="35" rx="3" fill="#1D3557"/>
+  <!-- Door -->
+  <rect x="375" y="275" width="50" height="45" rx="3" fill="#E63946"/>
+  <circle cx="417" cy="300" r="3" fill="#FFBA08"/>
+  <!-- Roof -->
+  <polygon points="280,90 400,40 520,90" fill="#E63946" opacity="0.8"/>
+  <!-- Decorative -->
+  <circle cx="130" cy="200" r="70" fill="#FFBA08" opacity="0.1"/>
+  <circle cx="670" cy="150" r="90" fill="#FFF8F0" opacity="0.05"/>
+  <!-- Title -->
+  <text x="400" y="370" font-family="Arial, sans-serif" font-size="20" fill="#FFF8F0" text-anchor="middle" opacity="0.8">Logement</text>
+</svg>

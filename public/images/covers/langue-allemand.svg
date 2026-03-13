@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" style="stop-color:#6A4C93"/>
+      <stop offset="100%" style="stop-color:#8B5CF6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg4)"/>
+  <!-- Speech bubbles -->
+  <rect x="250" y="80" width="180" height="80" rx="16" fill="#FFF8F0" opacity="0.9"/>
+  <polygon points="290,160 310,160 280,185" fill="#FFF8F0" opacity="0.9"/>
+  <text x="340" y="115" font-family="Arial, sans-serif" font-size="16" fill="#1D3557" text-anchor="middle" font-weight="bold">Hallo!</text>
+  <text x="340" y="140" font-family="Arial, sans-serif" font-size="14" fill="#6C757D" text-anchor="middle">Wie geht's?</text>
+  
+  <rect x="370" y="190" width="180" height="80" rx="16" fill="#FFBA08" opacity="0.9"/>
+  <polygon points="500,270 520,270 530,295" fill="#FFBA08" opacity="0.9"/>
+  <text x="460" y="225" font-family="Arial, sans-serif" font-size="16" fill="#1D3557" text-anchor="middle" font-weight="bold">Ahla!</text>
+  <text x="460" y="250" font-family="Arial, sans-serif" font-size="14" fill="#1D3557" text-anchor="middle">Labas?</text>
+  
+  <!-- Book -->
+  <rect x="160" y="220" width="80" height="100" rx="4" fill="#FFF8F0" opacity="0.3"/>
+  <text x="200" y="275" font-family="Arial" font-size="14" fill="#FFF8F0" text-anchor="middle">A1</text>
+  
+  <!-- Decorative -->
+  <circle cx="680" cy="100" r="50" fill="#FFBA08" opacity="0.15"/>
+  <circle cx="100" cy="350" r="60" fill="#E63946" opacity="0.1"/>
+  <!-- Letters -->
+  <text x="650" y="250" font-family="Arial" font-size="60" fill="#FFF8F0" opacity="0.1" font-weight="bold">Ä</text>
+  <text x="130" y="150" font-family="Arial" font-size="50" fill="#FFF8F0" opacity="0.1" font-weight="bold">Ö</text>
+  <!-- Title -->
+  <text x="400" y="370" font-family="Arial, sans-serif" font-size="20" fill="#FFF8F0" text-anchor="middle" opacity="0.8">Langue</text>
+</svg>

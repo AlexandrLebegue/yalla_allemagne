@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" style="stop-color:#FFBA08"/>
+      <stop offset="100%" style="stop-color:#F48C06"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg5)"/>
+  <!-- Coffee cup -->
+  <rect x="340" y="120" width="120" height="100" rx="8" fill="#FFF8F0" opacity="0.9"/>
+  <rect x="330" y="110" width="140" height="16" rx="8" fill="#FFF8F0"/>
+  <!-- Cup handle -->
+  <path d="M460,150 Q490,150 490,175 Q490,200 460,200" fill="none" stroke="#FFF8F0" stroke-width="8" opacity="0.9"/>
+  <!-- Steam -->
+  <path d="M370,100 Q375,80 380,100" fill="none" stroke="#FFF8F0" stroke-width="2" opacity="0.5"/>
+  <path d="M395,95 Q400,70 405,95" fill="none" stroke="#FFF8F0" stroke-width="2" opacity="0.5"/>
+  <path d="M420,100 Q425,80 430,100" fill="none" stroke="#FFF8F0" stroke-width="2" opacity="0.5"/>
+  <!-- Saucer -->
+  <ellipse cx="400" cy="225" rx="90" ry="15" fill="#FFF8F0" opacity="0.7"/>
+  
+  <!-- Icons around -->
+  <text x="180" y="140" font-family="Arial" font-size="40" opacity="0.3">🚊</text>
+  <text x="620" y="140" font-family="Arial" font-size="40" opacity="0.3">🛒</text>
+  <text x="180" y="280" font-family="Arial" font-size="40" opacity="0.3">🏙️</text>
+  <text x="620" y="280" font-family="Arial" font-size="40" opacity="0.3">🍞</text>
+  
+  <!-- Decorative -->
+  <circle cx="100" cy="100" r="50" fill="#E63946" opacity="0.1"/>
+  <circle cx="700" cy="350" r="60" fill="#1D3557" opacity="0.1"/>
+  <!-- Title -->
+  <text x="400" y="370" font-family="Arial, sans-serif" font-size="20" fill="#1D3557" text-anchor="middle" opacity="0.6">Vie quotidienne</text>
+</svg>

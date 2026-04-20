@@ -1,0 +1,299 @@
+{
+  "id": "dentaire",
+  "title": "Vocabulaire dentaire",
+  "description": "Les termes essentiels pour travailler dans un cabinet dentaire en Allemagne",
+  "emoji": "🦷",
+  "color": "secondary",
+  "cards": [
+    {
+      "id": "dent-01",
+      "front": "La dent",
+      "back": "der Zahn (pl. die Zähne)",
+      "phonetic": "tsaːn",
+      "example": "Der Patient hat starke Zahnschmerzen.",
+      "exampleTranslation": "Le patient a de fortes douleurs dentaires.",
+      "tags": ["anatomie"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "dent-02",
+      "front": "La gencive",
+      "back": "das Zahnfleisch",
+      "phonetic": "tsaːnflaɪ̯ʃ",
+      "example": "Das Zahnfleisch blutet leicht.",
+      "exampleTranslation": "La gencive saigne légèrement.",
+      "tags": ["anatomie"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "dent-03",
+      "front": "La mâchoire",
+      "back": "der Kiefer",
+      "phonetic": "ˈkiːfɐ",
+      "example": "Der Kiefer ist sehr empfindlich.",
+      "exampleTranslation": "La mâchoire est très sensible.",
+      "tags": ["anatomie"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "dent-04",
+      "front": "La langue",
+      "back": "die Zunge",
+      "phonetic": "ˈtsʊŋə",
+      "example": "Strecken Sie bitte die Zunge heraus.",
+      "exampleTranslation": "Tirez la langue, s'il vous plaît.",
+      "tags": ["anatomie"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "dent-05",
+      "front": "La molaire",
+      "back": "der Backenzahn / der Molar",
+      "phonetic": "ˈbakənˌtsaːn",
+      "example": "Der hintere Backenzahn muss behandelt werden.",
+      "exampleTranslation": "La molaire du fond doit être soignée.",
+      "tags": ["anatomie"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "dent-06",
+      "front": "L'incisive",
+      "back": "der Schneidezahn",
+      "phonetic": "ˈʃnaɪ̯dəˌtsaːn",
+      "example": "Der Schneidezahn ist gebrochen.",
+      "exampleTranslation": "L'incisive est cassée.",
+      "tags": ["anatomie"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "dent-07",
+      "front": "La canine",
+      "back": "der Eckzahn",
+      "phonetic": "ˈɛkˌtsaːn",
+      "example": "Der Eckzahn steht zu weit vor.",
+      "exampleTranslation": "La canine est trop en avant.",
+      "tags": ["anatomie"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "dent-08",
+      "front": "La carie",
+      "back": "die Karies",
+      "phonetic": "ˈkaːʁiɛs",
+      "example": "Er hat eine tiefe Karies am zweiten Molaren.",
+      "exampleTranslation": "Il a une carie profonde sur la deuxième molaire.",
+      "tags": ["pathologie"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "dent-09",
+      "front": "La douleur dentaire",
+      "back": "die Zahnschmerzen (pl.)",
+      "phonetic": "ˈtsaːnˌʃmɛʁtsən",
+      "example": "Seit wann haben Sie Zahnschmerzen?",
+      "exampleTranslation": "Depuis quand avez-vous mal aux dents ?",
+      "tags": ["pathologie", "communication"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "dent-10",
+      "front": "L'inflammation",
+      "back": "die Entzündung",
+      "phonetic": "ɛntˈtsʏndʊŋ",
+      "example": "Es gibt eine Entzündung im Zahnfleisch.",
+      "exampleTranslation": "Il y a une inflammation de la gencive.",
+      "tags": ["pathologie"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "dent-11",
+      "front": "La sensibilité dentaire",
+      "back": "die Zahnempfindlichkeit",
+      "phonetic": "ˈtsaːnɛmpfɪntlɪçkaɪ̯t",
+      "example": "Haben Sie Zahnempfindlichkeit bei Kälte?",
+      "exampleTranslation": "Avez-vous des dents sensibles au froid ?",
+      "tags": ["pathologie"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "dent-12",
+      "front": "La radiographie dentaire",
+      "back": "die Röntgenaufnahme",
+      "phonetic": "ˈʁœntɡənˌʔaʊ̯fˌnaːmə",
+      "example": "Wir machen eine Röntgenaufnahme.",
+      "exampleTranslation": "Nous allons faire une radiographie.",
+      "tags": ["diagnostic"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "dent-13",
+      "front": "L'anesthésie locale",
+      "back": "die örtliche Betäubung",
+      "phonetic": "ˈœʁtlɪçə bəˈtɔɪ̯bʊŋ",
+      "example": "Ich gebe Ihnen eine örtliche Betäubung.",
+      "exampleTranslation": "Je vais vous faire une anesthésie locale.",
+      "tags": ["soin"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "dent-14",
+      "front": "L'extraction dentaire",
+      "back": "die Zahnextraktion",
+      "phonetic": "tsaːnɛkstʁakˈtsi̯oːn",
+      "example": "Die Zahnextraktion ist leider notwendig.",
+      "exampleTranslation": "L'extraction dentaire est malheureusement nécessaire.",
+      "tags": ["soin", "chirurgie"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "dent-15",
+      "front": "Le plombage / l'obturation",
+      "back": "die Füllung",
+      "phonetic": "ˈfʏlʊŋ",
+      "example": "Die alte Füllung muss erneuert werden.",
+      "exampleTranslation": "L'ancien plombage doit être remplacé.",
+      "tags": ["soin"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "dent-16",
+      "front": "Le détartrage",
+      "back": "die Zahnsteinentfernung / die Reinigung",
+      "phonetic": "ˈtsaːnʃtaɪ̯nˌɛntfɛʁnʊŋ",
+      "example": "Eine professionelle Zahnreinigung ist empfehlenswert.",
+      "exampleTranslation": "Un détartrage professionnel est recommandé.",
+      "tags": ["soin"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "dent-17",
+      "front": "La couronne dentaire",
+      "back": "die Zahnkrone",
+      "phonetic": "tsaːnˌkʁoːnə",
+      "example": "Wir brauchen eine Krone für diesen Zahn.",
+      "exampleTranslation": "Nous avons besoin d'une couronne pour cette dent.",
+      "tags": ["prothèse"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "dent-18",
+      "front": "Le bridge dentaire",
+      "back": "die Zahnbrücke",
+      "phonetic": "tsaːnˌbʁʏkə",
+      "example": "Eine Zahnbrücke ersetzt den fehlenden Zahn.",
+      "exampleTranslation": "Un bridge remplace la dent manquante.",
+      "tags": ["prothèse"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "dent-19",
+      "front": "L'implant dentaire",
+      "back": "das Zahnimplantat",
+      "phonetic": "tsaːnɪmplanˈtaːt",
+      "example": "Ein Zahnimplantat ist eine dauerhafte Lösung.",
+      "exampleTranslation": "Un implant dentaire est une solution durable.",
+      "tags": ["prothèse", "chirurgie"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "dent-20",
+      "front": "Le dentier / la prothèse amovible",
+      "back": "die Zahnprothese / das Gebiss",
+      "phonetic": "tsaːnpʁoˈteːzə",
+      "example": "Das Gebiss sitzt nicht mehr richtig.",
+      "exampleTranslation": "Le dentier ne tient plus bien.",
+      "tags": ["prothèse"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "dent-21",
+      "front": "La dent de sagesse",
+      "back": "der Weisheitszahn",
+      "phonetic": "ˈvaɪ̯sˌhaɪ̯tstsaːn",
+      "example": "Der Weisheitszahn muss gezogen werden.",
+      "exampleTranslation": "La dent de sagesse doit être extraite.",
+      "tags": ["anatomie", "chirurgie"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "dent-22",
+      "front": "Le traitement de canal / la dévitalisation",
+      "back": "die Wurzelbehandlung",
+      "phonetic": "ˈvʊʁtsəlbəˌhandlʊŋ",
+      "example": "Eine Wurzelbehandlung dauert mehrere Sitzungen.",
+      "exampleTranslation": "Un traitement de canal nécessite plusieurs séances.",
+      "tags": ["soin"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "dent-23",
+      "front": "Ouvrez la bouche, s'il vous plaît",
+      "back": "Öffnen Sie bitte den Mund.",
+      "phonetic": "ˈœfnən ziː ˈbɪtə deːn mʊnt",
+      "tags": ["communication"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "dent-24",
+      "front": "Avez-vous mal ?",
+      "back": "Haben Sie Schmerzen?",
+      "phonetic": "ˈhaːbən ziː ˈʃmɛʁtsən",
+      "example": "Haben Sie noch Schmerzen nach der Behandlung?",
+      "exampleTranslation": "Avez-vous encore mal après le traitement ?",
+      "tags": ["communication"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "dent-25",
+      "front": "Depuis quand avez-vous mal ?",
+      "back": "Seit wann haben Sie Schmerzen?",
+      "phonetic": "zaɪ̯t van ˈhaːbən ziː ˈʃmɛʁtsən",
+      "tags": ["communication"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "dent-26",
+      "front": "Rincez-vous la bouche",
+      "back": "Spülen Sie bitte.",
+      "phonetic": "ˈʃpyːlən ziː ˈbɪtə",
+      "tags": ["communication"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "dent-27",
+      "front": "Ça va piquer un peu",
+      "back": "Das wird ein bisschen stechen.",
+      "phonetic": "das vɪʁt aɪ̯n ˈbɪsçən ˈʃtɛçən",
+      "tags": ["communication"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "dent-28",
+      "front": "Ne mangez pas pendant 2 heures",
+      "back": "Bitte zwei Stunden nichts essen.",
+      "phonetic": "ˈbɪtə tsvaɪ̯ ˈʃtʊndən nɪçts ˈɛsən",
+      "tags": ["communication"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "dent-29",
+      "front": "L'assurance maladie",
+      "back": "die Krankenversicherung",
+      "phonetic": "ˈkʁaŋkənfɛʁˌzɪçəʁʊŋ",
+      "example": "Haben Sie eine Krankenversicherung?",
+      "exampleTranslation": "Avez-vous une assurance maladie ?",
+      "tags": ["administratif"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "dent-30",
+      "front": "Le rendez-vous",
+      "back": "der Termin",
+      "phonetic": "tɛʁˈmiːn",
+      "example": "Ich möchte einen Termin vereinbaren.",
+      "exampleTranslation": "Je voudrais prendre rendez-vous.",
+      "tags": ["administratif"],
+      "difficulty": "easy"
+    }
+  ]
+}

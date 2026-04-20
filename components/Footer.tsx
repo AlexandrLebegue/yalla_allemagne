@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { FaHome, FaRobot, FaCompass, FaInfoCircle, FaGithub, FaLinkedin, FaEnvelope, FaArrowRight, FaHeart, FaPlane } from 'react-icons/fa';
+import { FaHome, FaRobot, FaCompass, FaInfoCircle, FaGraduationCap, FaGithub, FaLinkedin, FaEnvelope, FaArrowRight, FaHeart, FaPlane } from 'react-icons/fa';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,6 +11,7 @@ export default function Footer() {
     { href: '/', label: 'Accueil', icon: FaHome },
     { href: '/chatbot', label: 'Chatbot', icon: FaRobot },
     { href: '/tutoriels', label: 'Guides', icon: FaCompass },
+    { href: '/apprendre', label: 'Apprendre', icon: FaGraduationCap },
     { href: '/a-propos', label: 'À propos', icon: FaInfoCircle },
   ];
 

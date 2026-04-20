@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaHome, FaRobot, FaCompass, FaInfoCircle } from 'react-icons/fa';
+import { FaHome, FaRobot, FaCompass, FaInfoCircle, FaGraduationCap } from 'react-icons/fa';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,6 +15,7 @@ export default function Navbar() {
     { href: '/', label: 'Accueil', icon: FaHome },
     { href: '/chatbot', label: 'Chatbot', icon: FaRobot },
     { href: '/tutoriels', label: 'Guides', icon: FaCompass },
+    { href: '/apprendre', label: 'Apprendre', icon: FaGraduationCap },
     { href: '/a-propos', label: 'À propos', icon: FaInfoCircle },
   ];
 

@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaPlay, FaGraduationCap } from 'react-icons/fa';
 import type { CardDeck, DeckProgress } from '@/models/Flashcard';
-import { getProgress } from '@/lib/flashcards';
+import { getProgress } from '@/lib/flashcard-progress';
 
 interface Props {
   decks: CardDeck[];

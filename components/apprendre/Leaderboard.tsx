@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaTrophy, FaMedal, FaStar } from 'react-icons/fa';
-import type { LeaderboardEntry } from '@/lib/firestore';
+import type { LeaderboardEntry } from '@/models/LeaderboardEntry';
 
 interface Props {
   deckId: string;

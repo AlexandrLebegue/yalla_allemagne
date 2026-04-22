@@ -3,6 +3,7 @@ export type SwipeResult = 'known' | 'unknown';
 export interface FlashCard {
   id: string;
   front: string;
+  hint?: string;
   back: string;
   phonetic?: string;
   example?: string;

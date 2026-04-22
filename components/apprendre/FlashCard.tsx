@@ -31,7 +31,6 @@ export default function FlashCard({ card, isTop, stackOffset, onSwipe, sharedX }
 
   const rotate = useTransform(x, [-200, 0, 200], [-20, 0, 20]);
 
-  // Hint badge opacities
   const rightOpacity = useTransform(x, [0, 60, 150], [0, 0.6, 1]);
   const leftOpacity = useTransform(x, [-150, -60, 0], [1, 0.6, 0]);
 
@@ -60,6 +59,23 @@ export default function FlashCard({ card, isTop, stackOffset, onSwipe, sharedX }
   const scale = 1 - stackOffset * 0.05;
   const yOffset = stackOffset * 10;
 
+  const HintBadges = () => (
+    <>
+      <motion.div
+        className="absolute top-5 left-5 bg-green-500 text-white font-bold text-lg px-3 py-1 rounded-lg border-2 border-green-600"
+        style={{ opacity: rightOpacity }}
+      >
+        Oui ✓
+      </motion.div>
+      <motion.div
+        className="absolute top-5 right-5 bg-accent text-white font-bold text-lg px-3 py-1 rounded-lg border-2 border-red-700"
+        style={{ opacity: leftOpacity }}
+      >
+        Non ✗
+      </motion.div>
+    </>
+  );
+
   return (
     <motion.div
       className="absolute"
@@ -76,7 +92,6 @@ export default function FlashCard({ card, isTop, stackOffset, onSwipe, sharedX }
       dragSnapToOrigin={!isDraggingOff.current}
       onDragEnd={handleDragEnd}
     >
-      {/* Card shell — perspective wrapper for 3D flip */}
       <div
         className="w-72 h-[26rem] md:w-80 md:h-[28rem] cursor-pointer select-none"
         style={{ perspective: '1000px' }}
@@ -93,23 +108,7 @@ export default function FlashCard({ card, isTop, stackOffset, onSwipe, sharedX }
             className="absolute inset-0 bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center justify-center text-center"
             style={{ backfaceVisibility: 'hidden' }}
           >
-            {/* Hint badges */}
-            {isTop && (
-              <>
-                <motion.div
-                  className="absolute top-5 left-5 bg-green-500 text-white font-bold text-lg px-3 py-1 rounded-lg border-2 border-green-600"
-                  style={{ opacity: rightOpacity }}
-                >
-                  ✓ Connu
-                </motion.div>
-                <motion.div
-                  className="absolute top-5 right-5 bg-accent text-white font-bold text-lg px-3 py-1 rounded-lg border-2 border-red-700"
-                  style={{ opacity: leftOpacity }}
-                >
-                  ✗ À revoir
-                </motion.div>
-              </>
-            )}
+            {isTop && <HintBadges />}
 
             {card.tags && card.tags.length > 0 && (
               <span className="text-xs font-medium text-text-gray uppercase tracking-wide mb-4 bg-light-gray px-3 py-1 rounded-full">
@@ -122,9 +121,7 @@ export default function FlashCard({ card, isTop, stackOffset, onSwipe, sharedX }
             </p>
 
             {isTop && (
-              <p className="text-sm text-text-gray mt-auto">
-                Tap pour voir la réponse
-              </p>
+              <p className="text-sm text-text-gray mt-auto">Tap pour voir la réponse</p>
             )}
           </div>
 
@@ -133,23 +130,7 @@ export default function FlashCard({ card, isTop, stackOffset, onSwipe, sharedX }
             className="absolute inset-0 bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center justify-center text-center"
             style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
           >
-            {/* Hint badges duplicated on back face */}
-            {isTop && (
-              <>
-                <motion.div
-                  className="absolute top-5 left-5 bg-green-500 text-white font-bold text-lg px-3 py-1 rounded-lg border-2 border-green-600"
-                  style={{ opacity: rightOpacity }}
-                >
-                  ✓ Connu
-                </motion.div>
-                <motion.div
-                  className="absolute top-5 right-5 bg-accent text-white font-bold text-lg px-3 py-1 rounded-lg border-2 border-red-700"
-                  style={{ opacity: leftOpacity }}
-                >
-                  ✗ À revoir
-                </motion.div>
-              </>
-            )}
+            {isTop && <HintBadges />}
 
             <p className="text-xl md:text-2xl font-heading font-bold text-accent mb-2">
               {card.back}

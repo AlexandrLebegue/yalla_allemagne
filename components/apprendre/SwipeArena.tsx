@@ -119,11 +119,11 @@ export default function SwipeArena({ deck, unknownOnly, previousResults, onCompl
         {/* Manual swipe buttons */}
         <div className="flex items-center gap-8 mt-6">
           <motion.button
-            className="w-16 h-16 rounded-full bg-white border-2 border-accent text-accent flex items-center justify-center shadow-md text-xl"
+            className="w-16 h-16 rounded-full bg-white border-2 border-accent text-accent flex items-center justify-center shadow-md text-xl font-bold"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => handleSwipe('unknown')}
-            aria-label="À revoir"
+            aria-label="Non"
           >
             <FaTimes />
           </motion.button>
@@ -133,18 +133,18 @@ export default function SwipeArena({ deck, unknownOnly, previousResults, onCompl
           </p>
 
           <motion.button
-            className="w-16 h-16 rounded-full bg-white border-2 border-green-500 text-green-500 flex items-center justify-center shadow-md text-xl"
+            className="w-16 h-16 rounded-full bg-white border-2 border-green-500 text-green-500 flex items-center justify-center shadow-md text-xl font-bold"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => handleSwipe('known')}
-            aria-label="Je connais"
+            aria-label="Oui"
           >
             <FaCheck />
           </motion.button>
         </div>
 
         <p className="mt-4 text-xs text-text-gray">
-          ← À revoir &nbsp;|&nbsp; Connu →
+          ← Non &nbsp;|&nbsp; Oui →
         </p>
       </div>
     </div>

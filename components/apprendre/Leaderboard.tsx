@@ -11,11 +11,12 @@ interface Props {
   refreshKey?: number;
 }
 
-const RANK_ICONS = [
-  <FaTrophy key="1" className="text-yellow-500" />,
-  <FaMedal key="2" className="text-gray-400" />,
-  <FaMedal key="3" className="text-amber-600" />,
-];
+function RankIcon({ index }: { index: number }) {
+  if (index === 0) return <FaTrophy className="text-yellow-500" />;
+  if (index === 1) return <FaMedal className="text-gray-400" />;
+  if (index === 2) return <FaMedal className="text-amber-600" />;
+  return null;
+}
 
 export default function Leaderboard({ deckId, deckTitle, refreshKey = 0 }: Props) {
   const [entries, setEntries] = useState<LeaderboardEntry[]>([]);
@@ -24,17 +25,22 @@ export default function Leaderboard({ deckId, deckTitle, refreshKey = 0 }: Props
 
   useEffect(() => {
     setLoading(true);
+    setUnavailable(false);
+
     fetch(`/api/leaderboard?deckId=${encodeURIComponent(deckId)}`)
       .then((r) => {
         if (!r.ok) throw new Error('unavailable');
-        return r.json() as Promise<LeaderboardEntry[]>;
+        return r.json() as Promise<unknown>;
       })
       .then((data) => {
-        setEntries(data);
-        setUnavailable(false);
+        setEntries(data as LeaderboardEntry[]);
       })
-      .catch(() => setUnavailable(true))
-      .finally(() => setLoading(false));
+      .catch(() => {
+        setUnavailable(true);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }, [deckId, refreshKey]);
 
   if (unavailable) return null;
@@ -65,17 +71,19 @@ export default function Leaderboard({ deckId, deckTitle, refreshKey = 0 }: Props
           <ol className="space-y-2">
             {entries.map((entry, i) => (
               <motion.li
-                key={entry.id ?? i}
+                key={entry.id ?? String(i)}
                 initial={{ opacity: 0, x: -12 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.05 }}
                 className="flex items-center gap-3 py-2 border-b border-border last:border-0"
               >
-                <span className="w-6 text-center text-sm font-bold text-text-gray">
-                  {i < 3 ? RANK_ICONS[i] : `${i + 1}.`}
+                <span className="w-6 flex items-center justify-center text-sm font-bold text-text-gray">
+                  {i < 3 ? <RankIcon index={i} /> : `${i + 1}.`}
                 </span>
                 <span className="flex-1 font-medium text-text-dark truncate">{entry.name}</span>
-                <span className="text-sm text-text-gray">{entry.score}/{entry.total}</span>
+                <span className="text-sm text-text-gray">
+                  {entry.score}/{entry.total}
+                </span>
                 <span
                   className={`text-sm font-bold w-12 text-right ${
                     entry.percentage >= 70

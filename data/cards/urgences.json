@@ -7,7 +7,8 @@
   "cards": [
     {
       "id": "urg-01",
-      "front": "J'ai très mal aux dents",
+      "front": "Comment dire 'j'ai très mal aux dents' en allemand ?",
+      "hint": "Ich habe... • stark = fort • Zahnschmerzen = douleurs dentaires",
       "back": "Ich habe starke Zahnschmerzen.",
       "phonetic": "ɪç ˈhaːbə ˈʃtaʁkə ˈtsaːnʃmɛʁtsən",
       "tags": ["douleur"],
@@ -15,7 +16,8 @@
     },
     {
       "id": "urg-02",
-      "front": "Depuis combien de temps avez-vous mal ?",
+      "front": "Comment demander au patient depuis quand il a mal ?",
+      "hint": "Wie lange... • schon = déjà • Schmerzen = douleurs",
       "back": "Wie lange haben Sie schon Schmerzen?",
       "phonetic": "viː ˈlaŋə ˈhaːbən ziː ʃoːn ˈʃmɛʁtsən",
       "tags": ["anamnèse"],
@@ -23,7 +25,8 @@
     },
     {
       "id": "urg-03",
-      "front": "La douleur est-elle continue ou par crises ?",
+      "front": "Comment demander si la douleur est continue ou par crises ?",
+      "hint": "Sind die Schmerzen... • dauerhaft = continu • Schüben = crises/poussées",
       "back": "Sind die Schmerzen dauerhaft oder kommen sie in Schüben?",
       "phonetic": "zɪnt diː ˈʃmɛʁtsən ˈdaʊɐhaft ˈoːdɐ ˈkɔmən ziː ɪn ˈʃyːbən",
       "tags": ["anamnèse"],
@@ -31,7 +34,8 @@
     },
     {
       "id": "urg-04",
-      "front": "La douleur irradie-t-elle ?",
+      "front": "Comment demander si la douleur irradie quelque part ?",
+      "hint": "Strahlen... aus = irradier • irgendwo = quelque part • hin = vers",
       "back": "Strahlen die Schmerzen irgendwo hin aus?",
       "phonetic": "ˈʃtʁaːlən diː ˈʃmɛʁtsən ˈɪʁɡəntvɔ hɪn aʊs",
       "tags": ["anamnèse"],
@@ -39,7 +43,8 @@
     },
     {
       "id": "urg-05",
-      "front": "Avez-vous de la fièvre ?",
+      "front": "Comment demander 'avez-vous de la fièvre ?' en allemand ?",
+      "hint": "Haben Sie... • Fieber = fièvre (5 lettres, commence par F)",
       "back": "Haben Sie Fieber?",
       "phonetic": "ˈhaːbən ziː ˈfiːbɐ",
       "example": "Seit der Entzündung habe ich Fieber.",
@@ -49,7 +54,8 @@
     },
     {
       "id": "urg-06",
-      "front": "Un abcès dentaire",
+      "front": "Comment dit-on 'un abcès dentaire' en allemand ?",
+      "hint": "Masculin • Zahn = dent + Abszess (même racine qu'en français)",
       "back": "der Zahnabszess",
       "phonetic": "tsaːnˈapstses",
       "example": "Der Zahnabszess muss sofort behandelt werden.",
@@ -59,7 +65,8 @@
     },
     {
       "id": "urg-07",
-      "front": "La dent est cassée",
+      "front": "Comment dire 'la dent est cassée' en allemand ?",
+      "hint": "Der Zahn ist... • gebrochen = cassé • brechen = casser/rompre",
       "back": "Der Zahn ist gebrochen.",
       "phonetic": "deːɐ tsaːn ɪst ɡəˈbʁɔxən",
       "tags": ["urgence"],
@@ -67,7 +74,8 @@
     },
     {
       "id": "urg-08",
-      "front": "La dent est tombée",
+      "front": "Comment dire 'la dent est tombée' en allemand ?",
+      "hint": "Der Zahn ist... • herausgefallen = tombé dehors • heraus = vers l'extérieur",
       "back": "Der Zahn ist herausgefallen.",
       "phonetic": "deːɐ tsaːn ɪst hɛˈʁaʊsɡəfalən",
       "example": "Haben Sie den Zahn noch?",
@@ -77,7 +85,8 @@
     },
     {
       "id": "urg-09",
-      "front": "Conservez la dent dans du lait",
+      "front": "Comment dire 'conservez la dent dans du lait' ?",
+      "hint": "Bewahren Sie... auf = conserver • Milch = lait • aufbewahren = conserver",
       "back": "Bewahren Sie den Zahn in Milch auf.",
       "phonetic": "bəˈvaːʁən ziː deːn tsaːn ɪn mɪlç aʊf",
       "tags": ["urgence", "conseil"],
@@ -85,7 +94,8 @@
     },
     {
       "id": "urg-10",
-      "front": "Le saignement ne s'arrête pas",
+      "front": "Comment dire 'le saignement ne s'arrête pas' en allemand ?",
+      "hint": "Die Blutung... • hört nicht auf = ne s'arrête pas • aufhören = s'arrêter",
       "back": "Die Blutung hört nicht auf.",
       "phonetic": "diː ˈbluːtʊŋ høːɐt nɪçt aʊf",
       "tags": ["urgence"],
@@ -93,7 +103,8 @@
     },
     {
       "id": "urg-11",
-      "front": "Mordez sur cette compresse",
+      "front": "Comment dire 'mordez sur cette compresse' en allemand ?",
+      "hint": "Beißen Sie... • auf = sur • Kompresse = compresse (même racine)",
       "back": "Beißen Sie auf diese Kompresse.",
       "phonetic": "ˈbaɪsən ziː aʊf ˈdiːzə kɔmˈpʁɛsə",
       "tags": ["soin", "conseil"],
@@ -101,7 +112,8 @@
     },
     {
       "id": "urg-12",
-      "front": "Êtes-vous allergique à la pénicilline ?",
+      "front": "Comment demander si le patient est allergique à la pénicilline ?",
+      "hint": "Sind Sie allergisch... • gegen = contre • Penicillin (même racine)",
       "back": "Sind Sie allergisch gegen Penicillin?",
       "phonetic": "zɪnt ziː aˈlɛʁɡɪʃ ˈɡeːɡən penɪˈtsiːliːn",
       "tags": ["anamnèse", "médicament"],
@@ -109,7 +121,8 @@
     },
     {
       "id": "urg-13",
-      "front": "Prenez-vous des anticoagulants ?",
+      "front": "Comment demander si le patient prend des anticoagulants ?",
+      "hint": "Nehmen Sie... • Blut = sang • verdünnend = fluidifiant • Medikamente = médicaments",
       "back": "Nehmen Sie blutverdünnende Medikamente?",
       "phonetic": "ˈneːmən ziː ˈbluːtfɛʁˌdʏnəndə medɪkaˈmɛntə",
       "tags": ["anamnèse", "médicament"],
@@ -117,7 +130,8 @@
     },
     {
       "id": "urg-14",
-      "front": "Je vais vous prescrire des antibiotiques",
+      "front": "Comment dire 'je vais vous prescrire des antibiotiques' ?",
+      "hint": "Ich verschreibe... • Ihnen = vous (datif) • Antibiotika = antibiotiques",
       "back": "Ich verschreibe Ihnen Antibiotika.",
       "phonetic": "ɪç fɛʁˈʃʁaɪbə ˈiːnən antɪˈbi̯oːtɪka",
       "tags": ["médicament"],
@@ -125,7 +139,8 @@
     },
     {
       "id": "urg-15",
-      "front": "Prenez 3 fois par jour, avec les repas",
+      "front": "Comment dire 'prenez 3 fois par jour, avec les repas' en allemand ?",
+      "hint": "Nehmen Sie... • dreimal = 3 fois • täglich = par jour • Mahlzeiten = repas",
       "back": "Nehmen Sie es dreimal täglich zu den Mahlzeiten.",
       "phonetic": "ˈneːmən ziː ɛs ˈdʁaɪmaːl ˈtɛːklɪç tsuː deːn ˈmaːlˌtsaɪtən",
       "tags": ["médicament", "conseil"],
@@ -133,7 +148,8 @@
     },
     {
       "id": "urg-16",
-      "front": "Revenez si la douleur s'aggrave",
+      "front": "Comment dire 'revenez si la douleur s'aggrave' ?",
+      "hint": "Kommen Sie wieder... • wenn = si/quand • schlimmer = pire • werden = devenir",
       "back": "Kommen Sie wieder, wenn die Schmerzen schlimmer werden.",
       "phonetic": "ˈkɔmən ziː ˈviːdɐ vɛn diː ˈʃmɛʁtsən ˈʃlɪmɐ ˈveːɐdən",
       "tags": ["conseil"],
@@ -141,7 +157,8 @@
     },
     {
       "id": "urg-17",
-      "front": "Une inflammation de la pulpe",
+      "front": "Comment dit-on 'inflammation de la pulpe' en allemand ?",
+      "hint": "Féminin • terme latin : Pulpitis • ou Zahnmark = pulpe + Entzündung = inflammation",
       "back": "die Pulpitis / die Zahnmarkentzündung",
       "phonetic": "pʊlˈpiːtɪs",
       "example": "Die Pulpitis verursacht starke Schmerzen.",
@@ -151,7 +168,8 @@
     },
     {
       "id": "urg-18",
-      "front": "Un kyste dentaire",
+      "front": "Comment dit-on 'un kyste dentaire' en allemand ?",
+      "hint": "Féminin • Zahn = dent + Zyste (même racine qu'en français)",
       "back": "die Zahnzyste",
       "phonetic": "ˈtsaːnˌtsʏstə",
       "tags": ["pathologie"],
@@ -159,7 +177,8 @@
     },
     {
       "id": "urg-19",
-      "front": "Une fracture radiculaire",
+      "front": "Comment dit-on 'une fracture radiculaire' en allemand ?",
+      "hint": "Féminin • Wurzel = racine • Fraktur = fracture (même racine)",
       "back": "die Wurzelfraktur",
       "phonetic": "ˈvʊʁtsəlˌfʁaktʊʁ",
       "tags": ["pathologie", "traumatologie"],
@@ -167,7 +186,8 @@
     },
     {
       "id": "urg-20",
-      "front": "Appelez le 112 en cas d'urgence vitale",
+      "front": "Comment dire 'appelez le 112 en cas d'urgence' en allemand ?",
+      "hint": "Rufen Sie... an = appeler • Notfall = urgence • 112 = numéro européen",
       "back": "Rufen Sie bei einem Notfall die 112 an.",
       "phonetic": "ˈʁuːfən ziː baɪ ˈaɪnəm ˈnoːtˌfal diː ˈaɪnshʊndɐˈtsvœlf an",
       "tags": ["urgence"],

@@ -46,11 +46,14 @@ function HintBadges({ rightOpacity, leftOpacity }: HintBadgesProps) {
 const SWIPE_THRESHOLD = 100;
 const VELOCITY_THRESHOLD = 500;
 
+// flipState: 0 = front (question), 1 = back showing hint, 2 = back showing full answer
+type FlipState = 0 | 1 | 2;
+
 export default function FlashCard({ card, isTop, stackOffset, onSwipe, sharedX }: Props) {
   const ownX = useMotionValue(0);
   const x = sharedX ?? ownX;
 
-  const [isFlipped, setIsFlipped] = useState(false);
+  const [flipState, setFlipState] = useState<FlipState>(0);
   const isDraggingOff = useRef(false);
 
   const rotate = useTransform(x, [-200, 0, 200], [-20, 0, 20]);
@@ -75,12 +78,23 @@ export default function FlashCard({ card, isTop, stackOffset, onSwipe, sharedX }
       onSwipe(result);
       isDraggingOff.current = false;
       x.set(0);
-      setIsFlipped(false);
+      setFlipState(0);
     });
+  };
+
+  const handleCardClick = () => {
+    if (!isTop) return;
+    if (flipState === 0) {
+      setFlipState(card.hint ? 1 : 2);
+    } else if (flipState === 1) {
+      setFlipState(2);
+    }
+    // flipState 2: answer already visible, nothing more to reveal
   };
 
   const scale = 1 - stackOffset * 0.05;
   const yOffset = stackOffset * 10;
+  const isFlipped = flipState > 0;
 
   return (
     <motion.div
@@ -101,7 +115,7 @@ export default function FlashCard({ card, isTop, stackOffset, onSwipe, sharedX }
       <div
         className="w-72 h-[26rem] md:w-80 md:h-[28rem] cursor-pointer select-none"
         style={{ perspective: '1000px' }}
-        onClick={() => isTop && setIsFlipped((v) => !v)}
+        onClick={handleCardClick}
       >
         <motion.div
           className="relative w-full h-full"
@@ -109,7 +123,7 @@ export default function FlashCard({ card, isTop, stackOffset, onSwipe, sharedX }
           animate={{ rotateY: isFlipped ? 180 : 0 }}
           transition={{ duration: 0.45, ease: 'easeInOut' }}
         >
-          {/* Front face */}
+          {/* Front face — question */}
           <div
             className="absolute inset-0 bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center justify-center text-center"
             style={{ backfaceVisibility: 'hidden' }}
@@ -127,32 +141,61 @@ export default function FlashCard({ card, isTop, stackOffset, onSwipe, sharedX }
             </p>
 
             {isTop && (
-              <p className="text-sm text-text-gray mt-auto">Tap pour voir la réponse</p>
+              <p className="text-sm text-text-gray mt-auto">
+                {card.hint ? 'Tap pour voir l\'indice' : 'Tap pour voir la réponse'}
+              </p>
             )}
           </div>
 
-          {/* Back face */}
+          {/* Back face — hint then answer */}
           <div
             className="absolute inset-0 bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center justify-center text-center"
             style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
           >
             {isTop && <HintBadges rightOpacity={rightOpacity} leftOpacity={leftOpacity} />}
 
-            <p className="text-xl md:text-2xl font-heading font-bold text-accent mb-2">
-              {card.back}
-            </p>
+            {flipState === 1 && card.hint ? (
+              <>
+                <div className="w-full rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 mb-4">
+                  <p className="text-xs font-semibold text-amber-600 uppercase tracking-wide mb-1">
+                    Indice
+                  </p>
+                  <p className="text-base text-text-dark">{card.hint}</p>
+                </div>
 
-            {card.phonetic && (
-              <p className="text-sm text-text-gray font-mono mb-4">/{card.phonetic}/</p>
-            )}
-
-            {card.example && (
-              <div className="mt-4 pt-4 border-t border-border w-full text-left">
-                <p className="text-sm text-text-dark italic">&quot;{card.example}&quot;</p>
-                {card.exampleTranslation && (
-                  <p className="text-xs text-text-gray mt-1">{card.exampleTranslation}</p>
+                {card.tags && card.tags.length > 0 && (
+                  <span className="text-xs font-medium text-text-gray uppercase tracking-wide mb-4 bg-light-gray px-3 py-1 rounded-full">
+                    {card.tags[0]}
+                  </span>
                 )}
-              </div>
+
+                {isTop && (
+                  <p className="text-sm text-text-gray mt-auto">Tap pour voir la réponse</p>
+                )}
+              </>
+            ) : (
+              <>
+                <p className="text-xl md:text-2xl font-heading font-bold text-accent mb-2">
+                  {card.back}
+                </p>
+
+                {card.phonetic && (
+                  <p className="text-sm text-text-gray font-mono mb-3">/{card.phonetic}/</p>
+                )}
+
+                {card.hint && (
+                  <p className="text-xs text-text-gray italic mb-3 px-2">{card.hint}</p>
+                )}
+
+                {card.example && (
+                  <div className="mt-3 pt-3 border-t border-border w-full text-left">
+                    <p className="text-sm text-text-dark italic">&quot;{card.example}&quot;</p>
+                    {card.exampleTranslation && (
+                      <p className="text-xs text-text-gray mt-1">{card.exampleTranslation}</p>
+                    )}
+                  </div>
+                )}
+              </>
             )}
           </div>
         </motion.div>

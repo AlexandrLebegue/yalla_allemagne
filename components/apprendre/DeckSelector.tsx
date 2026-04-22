@@ -34,7 +34,7 @@ export default function DeckSelector({ decks, onSelectDeck }: Props) {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-accent to-red-700 text-white py-16 px-4">
+      <section className="bg-gradient-to-br from-accent to-red-700 text-white py-16">
         <div className="container text-center">
           <motion.div
             initial={{ opacity: 0, y: -20 }}

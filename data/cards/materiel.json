@@ -1,0 +1,229 @@
+{
+  "id": "materiel",
+  "title": "Matériel du cabinet",
+  "description": "Nommer les instruments et équipements du cabinet dentaire en allemand",
+  "emoji": "🔧",
+  "color": "accent",
+  "cards": [
+    {
+      "id": "mat-01",
+      "front": "Comment dit-on 'le fauteuil dentaire' ?",
+      "hint": "Masculin • Behandlung = traitement • Stuhl = chaise/siège",
+      "back": "der Behandlungsstuhl / der Zahnarztstuhl",
+      "phonetic": "bəˈhandlʊŋsˌʃtuːl",
+      "example": "Der Patient sitzt im Behandlungsstuhl.",
+      "exampleTranslation": "Le patient est assis dans le fauteuil dentaire.",
+      "tags": ["équipement"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "mat-02",
+      "front": "Comment dit-on 'la turbine / la fraise' ?",
+      "hint": "Féminin • même mot qu'en français pour la turbine",
+      "back": "die Turbine / das Handstück",
+      "phonetic": "tʊʁˈbiːnə / ˈhantˌʃtʏk",
+      "example": "Das Handstück dreht mit 400.000 Umdrehungen.",
+      "exampleTranslation": "La turbine tourne à 400 000 tours.",
+      "tags": ["instrument"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "mat-03",
+      "front": "Comment dit-on 'le miroir dentaire' ?",
+      "hint": "Masculin • Mund = bouche • Spiegel = miroir",
+      "back": "der Mundspiegel",
+      "phonetic": "ˈmʊntˌʃpiːɡəl",
+      "example": "Mit dem Mundspiegel sehen wir die Backenzähne.",
+      "exampleTranslation": "Avec le miroir dentaire, on voit les molaires.",
+      "tags": ["instrument"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "mat-04",
+      "front": "Comment dit-on 'la sonde dentaire' ?",
+      "hint": "Féminin • même racine qu'en français",
+      "back": "die Sonde / die Parodontalsonde",
+      "phonetic": "ˈzɔndə",
+      "example": "Die Sonde prüft die Zahnfleischtaschen.",
+      "exampleTranslation": "La sonde explore les poches parodontales.",
+      "tags": ["instrument"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "mat-05",
+      "front": "Comment dit-on 'l'aspirateur (dentaire)' ?",
+      "hint": "Neutre • Absaug = aspirer + Gerät = appareil",
+      "back": "das Absauggerät / die Speichelzieher",
+      "phonetic": "ˈapzaʊ̯kɡəˌʁeːt",
+      "example": "Der Speichelzieher ist in der linken Seite.",
+      "exampleTranslation": "L'aspirateur est du côté gauche.",
+      "tags": ["équipement"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "mat-06",
+      "front": "Comment dit-on 'la lampe à polymériser' ?",
+      "hint": "Féminin • Polymerisations + Lampe",
+      "back": "die Polymerisationslampe",
+      "phonetic": "polymeʁɪˈzatsi̯oːnsˌlampə",
+      "example": "Die Polymerisationslampe härtet das Komposit aus.",
+      "exampleTranslation": "La lampe à polymériser durcit le composite.",
+      "tags": ["équipement"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "mat-07",
+      "front": "Comment dit-on 'l'empreinte dentaire' ?",
+      "hint": "Masculin • ab-drücken = presser pour laisser une trace",
+      "back": "der Abdruck / die Abformung",
+      "phonetic": "ˈapˌdʁʊk",
+      "example": "Wir müssen einen Abdruck nehmen.",
+      "exampleTranslation": "Nous devons prendre une empreinte.",
+      "tags": ["soin"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "mat-08",
+      "front": "Comment dit-on 'la seringue / l'aiguille' ?",
+      "hint": "Féminin • Spritze = seringue • Kanüle = canule/aiguille",
+      "back": "die Spritze / die Kanüle",
+      "phonetic": "ˈʃpʁɪtsə / kaˈnyːlə",
+      "example": "Die Spritze enthält das Anästhetikum.",
+      "exampleTranslation": "La seringue contient l'anesthésique.",
+      "tags": ["instrument"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "mat-09",
+      "front": "Que signifie 'die Watte / der Wattebausch' ?",
+      "hint": "C'est un consommable blanc et doux, très utilisé...",
+      "back": "le coton / la boule de coton",
+      "phonetic": "ˈvatə / ˈvatəˌbaʊ̯ʃ",
+      "example": "Beißen Sie auf den Wattebausch.",
+      "exampleTranslation": "Mordez sur la boule de coton.",
+      "tags": ["consommable"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "mat-10",
+      "front": "Comment dit-on 'le détartreur à ultrasons' ?",
+      "hint": "Neutre • Ultraschall = ultrasons • Gerät = appareil",
+      "back": "das Ultraschallgerät",
+      "phonetic": "ˈʊltʁaˌʃalɡəˌʁeːt",
+      "example": "Das Ultraschallgerät entfernt den Zahnstein.",
+      "exampleTranslation": "Le détartreur à ultrasons enlève le tartre.",
+      "tags": ["équipement"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "mat-11",
+      "front": "Comment dit-on 'la résine composite' ?",
+      "hint": "Neutre • Komposit = composite (même racine)",
+      "back": "das Komposit / das Füllungsmaterial",
+      "phonetic": "kɔmˈpoːzɪt",
+      "example": "Das Komposit wird lichtgehärtet.",
+      "exampleTranslation": "Le composite est photopolymérisé.",
+      "tags": ["matériau"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "mat-12",
+      "front": "Comment dit-on 'la digue dentaire' ?",
+      "hint": "Masculin • Kofferdam = 'barrage valise' (terme technique anglais adopté)",
+      "back": "der Kofferdam",
+      "phonetic": "ˈkɔfɐˌdam",
+      "example": "Ich lege jetzt den Kofferdam.",
+      "exampleTranslation": "Je pose maintenant la digue.",
+      "tags": ["instrument"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "mat-13",
+      "front": "Comment dit-on 'la radio panoramique' ?",
+      "hint": "Neutre • Panorama + Röntgen (rayons X)",
+      "back": "das Panoramaröntgen / die OPG",
+      "phonetic": "panoˈʁaːmaˌʁœntɡən",
+      "example": "Bitte machen Sie ein Panoramaröntgen.",
+      "exampleTranslation": "Veuillez faire une radio panoramique.",
+      "tags": ["diagnostic"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "mat-14",
+      "front": "Comment dit-on 'les fils de suture' ?",
+      "hint": "Pluriel • Naht = couture/suture • Material = matériau",
+      "back": "das Nahtmaterial / die Nähte",
+      "phonetic": "ˈnaːtmateˌʁi̯aːl",
+      "example": "Die Nähte werden nach einer Woche entfernt.",
+      "exampleTranslation": "Les fils seront retirés après une semaine.",
+      "tags": ["chirurgie"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "mat-15",
+      "front": "Que signifie 'die Pinzette' ?",
+      "hint": "Un instrument de préhension fine, féminin, très courant en chirurgie",
+      "back": "la pince / la pincette",
+      "phonetic": "pɪnˈtsɛtə",
+      "example": "Mit der Pinzette greife ich das Nahtmaterial.",
+      "exampleTranslation": "Avec la pince, je saisis le fil de suture.",
+      "tags": ["instrument"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "mat-16",
+      "front": "Comment dit-on 'la lime endodontique' ?",
+      "hint": "Féminin • Wurzelkanal = canal radiculaire • Feile = lime",
+      "back": "die Wurzelkanalfeile",
+      "phonetic": "ˈvʊʁtsəlkanaːlˌfaɪ̯lə",
+      "example": "Die Wurzelkanalfeile reinigt den Kanal.",
+      "exampleTranslation": "La lime endodontique nettoie le canal.",
+      "tags": ["endodontie"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "mat-17",
+      "front": "Comment dit-on 'le ciment dentaire' ?",
+      "hint": "Neutre • Zement = ciment (même racine que français)",
+      "back": "das Zement / der Zinkoxid-Zement",
+      "phonetic": "tsɛˈmɛnt",
+      "example": "Das Zement fixiert die Krone.",
+      "exampleTranslation": "Le ciment fixe la couronne.",
+      "tags": ["matériau"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "mat-18",
+      "front": "Comment dire 'passer la fraise / le foret' ?",
+      "hint": "Der Bohrer = le foret • bohren = forer, percer",
+      "back": "den Bohrer einsetzen / bohren",
+      "phonetic": "ˈboːʁɐ",
+      "example": "Ich fange jetzt an zu bohren.",
+      "exampleTranslation": "Je commence à fraiser maintenant.",
+      "tags": ["soin"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "mat-19",
+      "front": "Que signifie 'das Desinfektionsmittel' ?",
+      "hint": "Desinfektions = désinfection + Mittel = produit/moyen",
+      "back": "le désinfectant / le produit désinfectant",
+      "phonetic": "dɛzɪnˈfɛktsɪ̯oːnsˌmɪtəl",
+      "example": "Das Desinfektionsmittel muss 30 Sekunden einwirken.",
+      "exampleTranslation": "Le désinfectant doit agir pendant 30 secondes.",
+      "tags": ["hygiène"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "mat-20",
+      "front": "Comment dire 'stériliser / l'autoclave' ?",
+      "hint": "sterilisieren = même que français • der Autoklav = l'autoclave",
+      "back": "sterilisieren / der Autoklav",
+      "phonetic": "stɛʁiliˈziːʁən / ˈaʊ̯toˌklaːf",
+      "example": "Die Instrumente werden im Autoklav sterilisiert.",
+      "exampleTranslation": "Les instruments sont stérilisés à l'autoclave.",
+      "tags": ["hygiène"],
+      "difficulty": "medium"
+    }
+  ]
+}

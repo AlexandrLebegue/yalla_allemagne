@@ -108,8 +108,8 @@ export default function SessionResults({ deck, results, onRestartUnknown, onRest
           <h2 className="text-2xl font-heading font-bold text-text-dark mb-1">
             Session terminée !
           </h2>
-          <p className={`text-4xl font-heading font-bold ${scoreColor} my-3`}>
-            {knownCount} / {total}
+          <p className={`text-4xl font-heading font-bold ${scoreColor} my-3 tabular-nums whitespace-nowrap`}>
+            {knownCount}&nbsp;/&nbsp;{total}
           </p>
           <p className="text-text-gray text-sm mb-4">
             Tu connais <strong>{pct}%</strong> des cartes de ce deck

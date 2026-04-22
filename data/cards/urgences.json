@@ -1,0 +1,177 @@
+{
+  "id": "urgences",
+  "title": "Urgences & douleur",
+  "description": "Gérer les urgences dentaires et la douleur en allemand au cabinet",
+  "emoji": "🚨",
+  "color": "accent",
+  "cards": [
+    {
+      "id": "urg-01",
+      "front": "J'ai très mal aux dents",
+      "back": "Ich habe starke Zahnschmerzen.",
+      "phonetic": "ɪç ˈhaːbə ˈʃtaʁkə ˈtsaːnʃmɛʁtsən",
+      "tags": ["douleur"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "urg-02",
+      "front": "Depuis combien de temps avez-vous mal ?",
+      "back": "Wie lange haben Sie schon Schmerzen?",
+      "phonetic": "viː ˈlaŋə ˈhaːbən ziː ʃoːn ˈʃmɛʁtsən",
+      "tags": ["anamnèse"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "urg-03",
+      "front": "La douleur est-elle continue ou par crises ?",
+      "back": "Sind die Schmerzen dauerhaft oder kommen sie in Schüben?",
+      "phonetic": "zɪnt diː ˈʃmɛʁtsən ˈdaʊɐhaft ˈoːdɐ ˈkɔmən ziː ɪn ˈʃyːbən",
+      "tags": ["anamnèse"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "urg-04",
+      "front": "La douleur irradie-t-elle ?",
+      "back": "Strahlen die Schmerzen irgendwo hin aus?",
+      "phonetic": "ˈʃtʁaːlən diː ˈʃmɛʁtsən ˈɪʁɡəntvɔ hɪn aʊs",
+      "tags": ["anamnèse"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "urg-05",
+      "front": "Avez-vous de la fièvre ?",
+      "back": "Haben Sie Fieber?",
+      "phonetic": "ˈhaːbən ziː ˈfiːbɐ",
+      "example": "Seit der Entzündung habe ich Fieber.",
+      "exampleTranslation": "Depuis l'inflammation, j'ai de la fièvre.",
+      "tags": ["anamnèse"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "urg-06",
+      "front": "Un abcès dentaire",
+      "back": "der Zahnabszess",
+      "phonetic": "tsaːnˈapstses",
+      "example": "Der Zahnabszess muss sofort behandelt werden.",
+      "exampleTranslation": "L'abcès dentaire doit être traité immédiatement.",
+      "tags": ["pathologie"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "urg-07",
+      "front": "La dent est cassée",
+      "back": "Der Zahn ist gebrochen.",
+      "phonetic": "deːɐ tsaːn ɪst ɡəˈbʁɔxən",
+      "tags": ["urgence"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "urg-08",
+      "front": "La dent est tombée",
+      "back": "Der Zahn ist herausgefallen.",
+      "phonetic": "deːɐ tsaːn ɪst hɛˈʁaʊsɡəfalən",
+      "example": "Haben Sie den Zahn noch?",
+      "exampleTranslation": "Avez-vous encore la dent ?",
+      "tags": ["urgence"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "urg-09",
+      "front": "Conservez la dent dans du lait",
+      "back": "Bewahren Sie den Zahn in Milch auf.",
+      "phonetic": "bəˈvaːʁən ziː deːn tsaːn ɪn mɪlç aʊf",
+      "tags": ["urgence", "conseil"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "urg-10",
+      "front": "Le saignement ne s'arrête pas",
+      "back": "Die Blutung hört nicht auf.",
+      "phonetic": "diː ˈbluːtʊŋ høːɐt nɪçt aʊf",
+      "tags": ["urgence"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "urg-11",
+      "front": "Mordez sur cette compresse",
+      "back": "Beißen Sie auf diese Kompresse.",
+      "phonetic": "ˈbaɪsən ziː aʊf ˈdiːzə kɔmˈpʁɛsə",
+      "tags": ["soin", "conseil"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "urg-12",
+      "front": "Êtes-vous allergique à la pénicilline ?",
+      "back": "Sind Sie allergisch gegen Penicillin?",
+      "phonetic": "zɪnt ziː aˈlɛʁɡɪʃ ˈɡeːɡən penɪˈtsiːliːn",
+      "tags": ["anamnèse", "médicament"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "urg-13",
+      "front": "Prenez-vous des anticoagulants ?",
+      "back": "Nehmen Sie blutverdünnende Medikamente?",
+      "phonetic": "ˈneːmən ziː ˈbluːtfɛʁˌdʏnəndə medɪkaˈmɛntə",
+      "tags": ["anamnèse", "médicament"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "urg-14",
+      "front": "Je vais vous prescrire des antibiotiques",
+      "back": "Ich verschreibe Ihnen Antibiotika.",
+      "phonetic": "ɪç fɛʁˈʃʁaɪbə ˈiːnən antɪˈbi̯oːtɪka",
+      "tags": ["médicament"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "urg-15",
+      "front": "Prenez 3 fois par jour, avec les repas",
+      "back": "Nehmen Sie es dreimal täglich zu den Mahlzeiten.",
+      "phonetic": "ˈneːmən ziː ɛs ˈdʁaɪmaːl ˈtɛːklɪç tsuː deːn ˈmaːlˌtsaɪtən",
+      "tags": ["médicament", "conseil"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "urg-16",
+      "front": "Revenez si la douleur s'aggrave",
+      "back": "Kommen Sie wieder, wenn die Schmerzen schlimmer werden.",
+      "phonetic": "ˈkɔmən ziː ˈviːdɐ vɛn diː ˈʃmɛʁtsən ˈʃlɪmɐ ˈveːɐdən",
+      "tags": ["conseil"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "urg-17",
+      "front": "Une inflammation de la pulpe",
+      "back": "die Pulpitis / die Zahnmarkentzündung",
+      "phonetic": "pʊlˈpiːtɪs",
+      "example": "Die Pulpitis verursacht starke Schmerzen.",
+      "exampleTranslation": "La pulpite provoque de fortes douleurs.",
+      "tags": ["pathologie"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "urg-18",
+      "front": "Un kyste dentaire",
+      "back": "die Zahnzyste",
+      "phonetic": "ˈtsaːnˌtsʏstə",
+      "tags": ["pathologie"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "urg-19",
+      "front": "Une fracture radiculaire",
+      "back": "die Wurzelfraktur",
+      "phonetic": "ˈvʊʁtsəlˌfʁaktʊʁ",
+      "tags": ["pathologie", "traumatologie"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "urg-20",
+      "front": "Appelez le 112 en cas d'urgence vitale",
+      "back": "Rufen Sie bei einem Notfall die 112 an.",
+      "phonetic": "ˈʁuːfən ziː baɪ ˈaɪnəm ˈnoːtˌfal diː ˈaɪnshʊndɐˈtsvœlf an",
+      "tags": ["urgence"],
+      "difficulty": "medium"
+    }
+  ]
+}

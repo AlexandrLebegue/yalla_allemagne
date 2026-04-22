@@ -1,10 +1,11 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaRedo, FaListAlt, FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { FaRedo, FaListAlt, FaChevronDown, FaChevronUp, FaPaperPlane } from 'react-icons/fa';
 import type { CardDeck, SwipeResult, DeckProgress } from '@/models/Flashcard';
 import { getProgress, saveProgress } from '@/lib/flashcard-progress';
+import Leaderboard from './Leaderboard';
 
 interface Props {
   deck: CardDeck;
@@ -17,6 +18,10 @@ interface Props {
 export default function SessionResults({ deck, results, onRestartUnknown, onRestartAll, onBackToSelect }: Props) {
   const [showKnown, setShowKnown] = useState(false);
   const [showUnknown, setShowUnknown] = useState(true);
+  const [playerName, setPlayerName] = useState('');
+  const [submitState, setSubmitState] = useState<'idle' | 'loading' | 'done' | 'error'>('idle');
+  const [leaderboardKey, setLeaderboardKey] = useState(0);
+  const savedRef = useRef(false);
 
   const knownIds = Object.entries(results)
     .filter(([, r]) => r === 'known')
@@ -31,7 +36,11 @@ export default function SessionResults({ deck, results, onRestartUnknown, onRest
 
   const getCard = (id: string) => deck.cards.find((c) => c.id === id);
 
+  // Persist progress once per render
   useEffect(() => {
+    if (savedRef.current) return;
+    savedRef.current = true;
+
     const existing: DeckProgress = getProgress(deck.id) ?? {
       deckId: deck.id,
       knownIds: [],
@@ -39,15 +48,12 @@ export default function SessionResults({ deck, results, onRestartUnknown, onRest
       completedAt: null,
       totalSessions: 0,
     };
-
-    // Merge: a card known this session overrides its previous state
     const mergedKnown = Array.from(
       new Set([...existing.knownIds.filter((id) => !unknownIds.includes(id)), ...knownIds])
     );
     const mergedUnknown = Array.from(
       new Set([...existing.unknownIds.filter((id) => !knownIds.includes(id)), ...unknownIds])
     );
-
     saveProgress(deck.id, {
       deckId: deck.id,
       knownIds: mergedKnown,
@@ -58,9 +64,34 @@ export default function SessionResults({ deck, results, onRestartUnknown, onRest
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const handleSubmitScore = async () => {
+    if (!playerName.trim() || submitState !== 'idle') return;
+    setSubmitState('loading');
+    try {
+      const res = await fetch('/api/leaderboard', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: playerName.trim(),
+          score: knownCount,
+          total,
+          deckId: deck.id,
+          deckTitle: deck.title,
+        }),
+      });
+      if (res.ok) {
+        setSubmitState('done');
+        setLeaderboardKey((k) => k + 1);
+      } else {
+        setSubmitState('error');
+      }
+    } catch {
+      setSubmitState('error');
+    }
+  };
+
   const scoreColor =
     pct >= 70 ? 'text-green-600' : pct >= 40 ? 'text-secondary' : 'text-accent';
-
   const scoreEmoji = pct >= 80 ? '🎉' : pct >= 50 ? '💪' : '📚';
 
   return (
@@ -72,7 +103,7 @@ export default function SessionResults({ deck, results, onRestartUnknown, onRest
         transition={{ duration: 0.5 }}
       >
         {/* Score card */}
-        <div className="card bg-white text-center mb-6">
+        <div className="card bg-white text-center mb-4">
           <p className="text-5xl mb-3">{scoreEmoji}</p>
           <h2 className="text-2xl font-heading font-bold text-text-dark mb-1">
             Session terminée !
@@ -84,7 +115,6 @@ export default function SessionResults({ deck, results, onRestartUnknown, onRest
             Tu connais <strong>{pct}%</strong> des cartes de ce deck
           </p>
 
-          {/* Visual bar */}
           <div className="h-3 bg-light-gray rounded-full overflow-hidden mb-6">
             <motion.div
               className="h-full bg-green-500 rounded-full"
@@ -94,6 +124,39 @@ export default function SessionResults({ deck, results, onRestartUnknown, onRest
             />
           </div>
 
+          {/* Submit score */}
+          <div className="border-t border-border pt-4 mb-4">
+            <p className="text-sm font-medium text-text-dark mb-2">
+              Poster mon score au tableau
+            </p>
+            {submitState === 'done' ? (
+              <p className="text-green-600 text-sm font-medium">✓ Score publié !</p>
+            ) : (
+              <div className="flex gap-2">
+                <input
+                  className="input flex-1 text-sm"
+                  placeholder="Ton prénom ou pseudo"
+                  maxLength={30}
+                  value={playerName}
+                  onChange={(e) => setPlayerName(e.target.value)}
+                  onKeyDown={(e) => e.key === 'Enter' && handleSubmitScore()}
+                  disabled={submitState === 'loading'}
+                />
+                <motion.button
+                  className="btn btn-primary flex items-center gap-1 px-3 disabled:opacity-50"
+                  onClick={handleSubmitScore}
+                  disabled={!playerName.trim() || submitState === 'loading'}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <FaPaperPlane className="text-sm" />
+                </motion.button>
+              </div>
+            )}
+            {submitState === 'error' && (
+              <p className="text-accent text-xs mt-1">Erreur — leaderboard non disponible.</p>
+            )}
+          </div>
+
           {/* Action buttons */}
           <div className="flex flex-col gap-3">
             {unknownIds.length > 0 && (
@@ -101,7 +164,7 @@ export default function SessionResults({ deck, results, onRestartUnknown, onRest
                 className="btn btn-primary flex items-center justify-center gap-2"
                 onClick={onRestartUnknown}
               >
-                <FaRedo className="text-sm" /> Retravailler les {unknownIds.length} cartes inconnues
+                <FaRedo className="text-sm" /> Retravailler les {unknownIds.length} Non
               </button>
             )}
             <button
@@ -119,15 +182,18 @@ export default function SessionResults({ deck, results, onRestartUnknown, onRest
           </div>
         </div>
 
+        {/* Leaderboard */}
+        <Leaderboard deckId={deck.id} deckTitle={deck.title} refreshKey={leaderboardKey} />
+
         {/* Unknown cards list */}
         {unknownIds.length > 0 && (
-          <div className="card bg-white mb-4">
+          <div className="card bg-white mb-4 mt-4">
             <button
               className="flex items-center justify-between w-full text-left"
               onClick={() => setShowUnknown((v) => !v)}
             >
               <span className="font-heading font-semibold text-accent">
-                ✗ À revoir ({unknownIds.length})
+                Non — À revoir ({unknownIds.length})
               </span>
               {showUnknown ? <FaChevronUp className="text-text-gray" /> : <FaChevronDown className="text-text-gray" />}
             </button>
@@ -158,7 +224,7 @@ export default function SessionResults({ deck, results, onRestartUnknown, onRest
               onClick={() => setShowKnown((v) => !v)}
             >
               <span className="font-heading font-semibold text-green-600">
-                ✓ Connus ({knownIds.length})
+                Oui — Connus ({knownIds.length})
               </span>
               {showKnown ? <FaChevronUp className="text-text-gray" /> : <FaChevronDown className="text-text-gray" />}
             </button>

@@ -19,6 +19,30 @@ interface Props {
   sharedX?: MotionValue<number>;
 }
 
+interface HintBadgesProps {
+  rightOpacity: MotionValue<number>;
+  leftOpacity: MotionValue<number>;
+}
+
+function HintBadges({ rightOpacity, leftOpacity }: HintBadgesProps) {
+  return (
+    <>
+      <motion.div
+        className="absolute top-5 left-5 bg-green-500 text-white font-bold text-lg px-3 py-1 rounded-lg border-2 border-green-600"
+        style={{ opacity: rightOpacity }}
+      >
+        Oui ✓
+      </motion.div>
+      <motion.div
+        className="absolute top-5 right-5 bg-accent text-white font-bold text-lg px-3 py-1 rounded-lg border-2 border-red-700"
+        style={{ opacity: leftOpacity }}
+      >
+        Non ✗
+      </motion.div>
+    </>
+  );
+}
+
 const SWIPE_THRESHOLD = 100;
 const VELOCITY_THRESHOLD = 500;
 
@@ -30,7 +54,6 @@ export default function FlashCard({ card, isTop, stackOffset, onSwipe, sharedX }
   const isDraggingOff = useRef(false);
 
   const rotate = useTransform(x, [-200, 0, 200], [-20, 0, 20]);
-
   const rightOpacity = useTransform(x, [0, 60, 150], [0, 0.6, 1]);
   const leftOpacity = useTransform(x, [-150, -60, 0], [1, 0.6, 0]);
 
@@ -58,23 +81,6 @@ export default function FlashCard({ card, isTop, stackOffset, onSwipe, sharedX }
 
   const scale = 1 - stackOffset * 0.05;
   const yOffset = stackOffset * 10;
-
-  const HintBadges = () => (
-    <>
-      <motion.div
-        className="absolute top-5 left-5 bg-green-500 text-white font-bold text-lg px-3 py-1 rounded-lg border-2 border-green-600"
-        style={{ opacity: rightOpacity }}
-      >
-        Oui ✓
-      </motion.div>
-      <motion.div
-        className="absolute top-5 right-5 bg-accent text-white font-bold text-lg px-3 py-1 rounded-lg border-2 border-red-700"
-        style={{ opacity: leftOpacity }}
-      >
-        Non ✗
-      </motion.div>
-    </>
-  );
 
   return (
     <motion.div
@@ -108,7 +114,7 @@ export default function FlashCard({ card, isTop, stackOffset, onSwipe, sharedX }
             className="absolute inset-0 bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center justify-center text-center"
             style={{ backfaceVisibility: 'hidden' }}
           >
-            {isTop && <HintBadges />}
+            {isTop && <HintBadges rightOpacity={rightOpacity} leftOpacity={leftOpacity} />}
 
             {card.tags && card.tags.length > 0 && (
               <span className="text-xs font-medium text-text-gray uppercase tracking-wide mb-4 bg-light-gray px-3 py-1 rounded-full">
@@ -130,7 +136,7 @@ export default function FlashCard({ card, isTop, stackOffset, onSwipe, sharedX }
             className="absolute inset-0 bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center justify-center text-center"
             style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
           >
-            {isTop && <HintBadges />}
+            {isTop && <HintBadges rightOpacity={rightOpacity} leftOpacity={leftOpacity} />}
 
             <p className="text-xl md:text-2xl font-heading font-bold text-accent mb-2">
               {card.back}
